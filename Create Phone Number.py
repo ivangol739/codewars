@@ -15,4 +15,5 @@ def create_phone_number(numbers):
 
 # Пример использования
 phone = create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
-print(phone)  # Выведет: "(123) 456-7890"
+print(phone)
+#test
