@@ -18,10 +18,18 @@
 # print(newstr)
 
 # Итерация по списку
-cheeses = ['brie', 'gjetost', 'havarti']
+# cheeses = ['brie', 'gjetost', 'havarti']
 
-for chees in cheeses:
-  if chees.startswith('x'):
-    print("I won't eat anything that starts with 'x'")
-    break
-  el
+# for chees in cheeses:
+#   if chees.startswith('x'):
+#     print("I won't eat anything that starts with 'x'")
+#     break
+#   else:
+#     print(chees)
+
+years_list = [1996, 1997, 1998, 1999, 2000]
+things = []
+
+# print(years_list[3])
+# print(max(years_list))
+  
