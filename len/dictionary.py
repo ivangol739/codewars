@@ -26,17 +26,17 @@
 # del(pythons['Cleese'])
 # print(pythons)
 
-print(set({'apple': 'red', 'orange': 'orange', 'cherry': 'red'}))
-s = set((1, 2, 3, 'eee'))
-print(s)
-s.add(5)
-print(s)
-s.remove('eee')
-print(s)
+# print(set({'apple': 'red', 'orange': 'orange', 'cherry': 'red'}))
+# s = set((1, 2, 3, 'eee'))
+# print(s)
+# s.add(5)
+# print(s)
+# s.remove('eee')
+# print(s)
 
 furniture = set(('sofa', 'ottoman', 'table'))
-for i in furniture:
-  print(i)
+# for i in furniture:
+  # print(i)
 
 drinks = {
   'martini': {'vodka', 'vermouth'},
@@ -45,3 +45,6 @@ drinks = {
   'manhattan': {'rye', 'vermouth', 'bitters'},
   'screwdriver': {'orange juice', 'vodka'}
 }
+
+for i, j in drinks.items():
+  print(list(j)[0])
