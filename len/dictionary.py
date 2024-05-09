@@ -73,4 +73,25 @@ life = {
   'other': {}
 }
 
-print(life)
+# print(life)
+# print(life['animals']['cats'])
+
+squares = {x: x**2 for x in range(10)}
+print(squares)
+
+odd = {x for x in range(10) if x % 2 != 0}
+print(odd)
+
+a = ('optimist', 'pessimist', 'troll')
+b = ('The glass is half full', 'The glass is half empty', 'How did you get a glass?')
+
+c = dict(zip(a, b))
+print(c)
+
+titles = ['Creature of Habit', 'Crewel Fate', 'Sharks On a Plane']
+plots = ['A nun turns into a monster', 'A haunted yarn shop', 'Check your exits']
+
+movies = dict(zip(titles, plots))
+print(movies)
+
+
