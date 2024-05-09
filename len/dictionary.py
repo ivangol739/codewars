@@ -34,14 +34,43 @@
 # s.remove('eee')
 # print(s)
 
-furniture = set(('sofa', 'ottoman', 'table'))
-for i in furniture:
-  print(i)
+# furniture = set(('sofa', 'ottoman', 'table'))
+# for i in furniture:
+#   print(i)
 
-drinks = {
-  'martini': {'vodka', 'vermouth'},
-  'black russian': {'vodka', 'kahlua'},
-  'white russian': {'cream', 'kahlua', 'vodka'},
-  'manhattan': {'rye', 'vermouth', 'bitters'},
-  'screwdriver': {'orange juice', 'vodka'}
+# drinks = {
+#   'martini': {'vodka', 'vermouth'},
+#   'black russian': {'vodka', 'kahlua'},
+#   'white russian': {'cream', 'kahlua', 'vodka'},
+#   'manhattan': {'rye', 'vermouth', 'bitters'},
+#   'screwdriver': {'orange juice', 'vodka'}
+# }
+
+e2f = {
+  'dog': 'chien',
+  'cat': 'chat',
+  'walrus': 'morse',
 }
+
+for i, j in e2f.items():
+  print(f"{i}/{j}")
+
+
+f2e = {}
+for i, j in e2f.items():
+  f2e[j] = i
+
+keys = set(e2f.keys())
+# print(keys)
+
+life = {
+  'animals': {
+    'cats': ['Henri', 'Grumpy', 'Lucy'],
+    'octopi': {},
+    'emus': {}
+  },
+  'plants': {},
+  'other': {}
+}
+
+print(life)
