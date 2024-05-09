@@ -34,17 +34,14 @@
 # s.remove('eee')
 # print(s)
 
-# furniture = set(('sofa', 'ottoman', 'table'))
-# for i in furniture:
-  # print(i)
+furniture = set(('sofa', 'ottoman', 'table'))
+for i in furniture:
+  print(i)
 
-# drinks = {
-#   'martini': {'vodka', 'vermouth'},
-#   'black russian': {'vodka', 'kahlua'},
-#   'white russian': {'cream', 'kahlua', 'vodka'},
-#   'manhattan': {'rye', 'vermouth', 'bitters'},
-#   'screwdriver': {'orange juice', 'vodka'}
-# }
-
-# for i, j in drinks.items():
-#   print(list(j)[0])
+drinks = {
+  'martini': {'vodka', 'vermouth'},
+  'black russian': {'vodka', 'kahlua'},
+  'white russian': {'cream', 'kahlua', 'vodka'},
+  'manhattan': {'rye', 'vermouth', 'bitters'},
+  'screwdriver': {'orange juice', 'vodka'}
+}
