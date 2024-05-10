@@ -91,6 +91,25 @@ def run_something_with_args(func, arg1, arg2):
 
 run_something_with_args(add_args, 5, 9)
 
+#  ---
+def outer(a, b):
+  def inner(c, d):
+    return c + d
+  return inner (a, b)
+
+print(outer(4, 7))
+
+# ---
+
+def knights2(saying):
+  def inner2():
+    return f"We are the knights who say: {saying}"
+  return inner2
+
+a = knights2('Duck')
+print(a())
+b = knights2('Hasenpfeffer')
+print(b())
 
 
 
