@@ -73,6 +73,24 @@ def print_kwargs(**kwargs):
 print_kwargs()
 print_kwargs(wine='merlot', entree='mutton', dessert='macaroon')
 
+# ---
+
+def answer():
+  print(42)
+
+def run_something(fuck):
+  fuck()
+
+run_something(answer)
+
+def add_args(arg1, arg2):
+  print(arg1 + arg2)
+
+def run_something_with_args(func, arg1, arg2):
+  func(arg1, arg2)
+
+run_something_with_args(add_args, 5, 9)
+
 
 
 
