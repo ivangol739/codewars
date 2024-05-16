@@ -10,4 +10,4 @@ def get_middle(s):
     new = s[len(s) // 2]
   return new
 
-print(get_middle('testing'))
+print(get_middle('testting'))
