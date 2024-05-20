@@ -34,4 +34,9 @@ def fio(initials: List[str]):
 def list_of_numbers(n: int):
   return list(range(1, n + 1))
 
-print(list_of_numbers(9))
+# print(list_of_numbers(9))
+
+
+def reverse(string: str):
+  return string[::-1].lower()
+print(reverse('Пусть старо как мир понтье корча порча привороG'))
