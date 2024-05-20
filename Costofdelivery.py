@@ -12,3 +12,4 @@ if __name__ == '__main__':
     delivery = get_cost(12)
     assert '500' in delivery, "Стоимость доставки должна быть 500 руб. если вес 12 кг"
     print('Вес посылки 12 кг', delivery)
+
