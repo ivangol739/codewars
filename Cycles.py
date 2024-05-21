@@ -23,3 +23,20 @@ def solve(hare_distance, turtle_distance):
   return result
 
 print(solve(hare_distance, turtle_distance))
+
+
+todo_list = [
+    ["Разобрать почту", 1],
+    ["Обзвонить клиентов", 2],
+    ["Запланировать дела на завтра", 0.6],
+    ["Сделать презентацию", 3],
+    ["Созвон с командой", 0.5]
+]
+
+
+def solve(to_d0: list, workday: float = 8):
+  work_time = 0.0
+  for i in todo_list:
+    work_time += i[1]
+  return workday - work_time
+print(solve(todo_list))
