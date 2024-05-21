@@ -124,3 +124,38 @@ def solve(cook_book: list, person: int):
         result.append(co[:-2])
     return result
 print(solve(cook_book, person))
+
+
+models = [
+    '480 ГБ 2.5" SATA накопитель Kingston A400',
+    '500 ГБ 2.5" SATA накопитель Samsung 870 EVO',
+    '480 ГБ 2.5" SATA накопитель ADATA SU650',
+    '240 ГБ 2.5" SATA накопитель ADATA SU650',
+    '250 ГБ 2.5" SATA накопитель Samsung 870 EVO',
+    '256 ГБ 2.5" SATA накопитель Apacer AS350 PANTHER',
+    '480 ГБ 2.5" SATA накопитель WD Green',
+    '500 ГБ 2.5" SATA накопитель WD Red SA500'
+]
+
+available = [1, 1, 1, 1, 0, 1, 1, 0]
+# (1 - есть, 0 - нет):
+
+manufacturers = ['Intel', 'Samsung', 'WD']
+
+# Сисадмину Василию нужно срочно починить компьютеры, в которых злые пользователи сломали диски с данными.
+# Сколько компьютеров сможет починить Василий, если в магазине не все позиции в наличии, а в организацию разрешается закупать только модели дисков из указанного списка производителей manufacturers?
+# Выведите названия всех подходящих моделей дисков и количество дисков, которые купит Василий.
+
+
+def solve(models: list, available: list, manufacturers: list):
+  repair_count = 0
+  ssds = []
+  for i in zip(models, available):
+    if i[1] == 1:
+      for j in manufacturers:
+        if j in i[0]:
+          ssds.append(i[0])
+          repair_count += 1
+  return ssds, repair_count
+
+solve(models, available, manufacturers)
