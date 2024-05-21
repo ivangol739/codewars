@@ -40,3 +40,20 @@ def solve(to_d0: list, workday: float = 8):
     work_time += i[1]
   return workday - work_time
 print(solve(todo_list))
+
+
+boys = ['Peter', 'Alex', 'John', 'Arthur', 'Richard']
+girls = ['Kate', 'Liza', 'Kira', 'Emma', 'Trisha']
+
+result = ""
+
+if len(boys) == len(girls):
+  boys.sort()
+  girls.sort()
+  for p in zip(boys, girls):
+    result += f"{p[0]} и {p[1]}, "
+  result = result[:-2]
+else:
+  result = 'Кто-то может остаться без пары!'
+
+print(result)
