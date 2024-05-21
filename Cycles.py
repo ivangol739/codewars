@@ -57,3 +57,25 @@ else:
   result = 'Кто-то может остаться без пары!'
 
 print(result)
+
+
+phrases = [
+           "нажал кабан на баклажан",
+           "дом как комод",
+           "рвал дед лавр",
+           "азот калий и лактоза",
+           "а собака боса",
+           "тонет енот",
+           "карман мрак",
+           "пуст суп"
+]
+
+def solve(phrases: list):
+    result = []
+    for phrase in phrases: # пройдите циклом по всем фразам
+      new_phrase = phrase.replace(" ", "")
+      if new_phrase == new_phrase[::-1]:
+        result.append(phrase)
+    return result
+
+print(solve(phrases))
