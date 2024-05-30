@@ -1,4 +1,5 @@
 import math
+from pprint import pprint
 # 1
 
 def discriminant(a, b, c):
@@ -32,10 +33,7 @@ def vote(votes):
   
   
 # 3
-# Необходимо реализовать следующие функции.
 
-# get_name — функция. Принимает номер документа и выводит имя человека, которому он принадлежит. Если такого документа не существует, вывести “Документ не найден”.
-# get_directory — функция. Принимает номер документа и выводит номер полки, на которой он находится. Если такой документ не найден, на полках вывести “Полки с таким документом не найдено”.
 # add — функция, которая добавит новый документ в каталог и перечень полок.
 # В результате корректного выполнения задания будет выведен следующий результат:
 
@@ -60,13 +58,25 @@ directories = {
       }
 
 def get_name(doc_number):
-  print()
+  for document in documents:
+    if doc_number == document["number"]:
+      return document["name"]
+  return "Документ не найден"
 
-def get_directory(doc_number):
-  print()
+def get_directory(doc_number):  
+  for k, v in directories.items():
+    if doc_number in v:
+      return k
+  return "Полки с таким документом не найдено"
 
 def add(document_type, number, name, shelf_number):
-  print("")
+  documents.append({"type": document_type, "number": number, "name": name})
+  shelf_number_str = str(shelf_number)
+  if shelf_number_str in directories:
+    directories[shelf_number_str].append(number)
+    return "Документ добавлен"
+  else:
+    return "Полки с таким документом не найдено"
 
 if __name__ == '__main__':
     print(get_name("10006"))
