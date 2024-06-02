@@ -52,3 +52,23 @@ guest = User(is_admin=False)
 
 access_admin_panel(admin)
 access_admin_panel(guest)
+
+#Декоратор для кэширования
+
+def cache(func):
+  cached_result = {}
+  def wrapper(*args):
+    if args in cached_result:
+      return cached_result[args]
+    result = func(*args)
+    cached_result[args] = result
+    return result
+  return wrapper
+
+@cache
+def fib(n):
+  if n < 2:
+    return n
+  return fib(n-1) + fib(n-2)
+
+print(fib(10))
