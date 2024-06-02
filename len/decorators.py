@@ -28,3 +28,27 @@ def add(a, b):
   return a + b
 
 add(5, 3)
+
+#Декоратор для проверки прав доступа
+
+def require_admin(func):
+  def wrapper(user, *args, **kwargs):
+    if user.is_admin:
+      return func(user, *args, **kwargs)
+    else:
+      print("Доступ запрещен")
+  return wrapper
+
+class User:
+  def __init__(self, is_admin):
+    self.is_admin = is_admin
+
+@require_admin
+def access_admin_panel(user):
+  print("Добро пожаловать в админ-панель!")
+  
+admin = User(is_admin=True)
+guest = User(is_admin=False)
+
+access_admin_panel(admin)
+access_admin_panel(guest)
