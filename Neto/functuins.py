@@ -79,6 +79,7 @@ def add(document_type, number, name, shelf_number):
     return "Полки с таким документом не найдено"
 
 if __name__ == '__main__':
+  
     print(get_name("10006"))
     print(get_directory("11-2"))
     print(get_name("101"))
