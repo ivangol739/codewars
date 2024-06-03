@@ -133,8 +133,22 @@ def good(l):
 print(good(['Harry', 'Ron', 'Hermione']))
 
 
+#---
 
+def get_odds(start, finish):
+  number = start
+  while number <= finish:
+    if number % 2 != 0:
+      yield number
+    number += 1
 
+ran = get_odds(1, 10)
+
+for i in range(2):
+  next(ran)
+  
+third = next(ran)
+print(third)
 
 
 
