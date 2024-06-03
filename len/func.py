@@ -127,6 +127,13 @@ edit_story(stairs, enliven)
 edit_story(stairs, lambda word: word.capitalize() + '!')
 
 
+def good(l):
+  return l
+
+print(good(['Harry', 'Ron', 'Hermione']))
+
+
+
 
 
 
