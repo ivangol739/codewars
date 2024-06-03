@@ -150,6 +150,23 @@ for i in range(2):
 third = next(ran)
 print(third)
 
+#---
+
+def test(func):
+  def wrapper(*args, **kwrags):
+    print("start")
+    res = func(*args, **kwrags)
+    print('end')
+    return res
+  return wrapper
+
+@test
+def st():
+  print("Function is executing...")
+  
+st()
+
+
 
 
 
