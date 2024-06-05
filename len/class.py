@@ -40,8 +40,6 @@ give_me_a_yogo.exclaim()
 give_me_a_yogo.need_a_push()
 
 
-
-
 class Person():
   def __init__(self, name):
     self.name = name
@@ -60,6 +58,18 @@ doctor = MDPerson("Fudd")
 lawyer = JDPerson("Fudd")
 
 
-print(person.name)
-print(doctor.name)
-print(lawyer.name)
+# print(person.name)
+# print(doctor.name)
+# print(lawyer.name)
+
+class EmailPerson(Person):
+  def __init__(self, name, email):
+    super().__init__(name)
+    self.email = email
+    
+bob = EmailPerson("BOB", "bob@gmail.com")
+print(bob.name, bob.email)
+
+
+
+
