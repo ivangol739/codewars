@@ -26,6 +26,9 @@ class Yugo(Car):
   def exclaim(self):
     print("I'm a Yugo! Much like a Car, but more Yugo-ish")
 
+  def need_a_push(self):
+    print("A little help here?")
+
 # print(issubclass(Yugo, Car))
 
 give_me_a_car = Car()
@@ -33,6 +36,10 @@ give_me_a_yogo = Yugo()
 
 give_me_a_car.exclaim()
 give_me_a_yogo.exclaim()
+
+give_me_a_yogo.need_a_push()
+
+
 
 
 class Person():
