@@ -143,3 +143,11 @@ c.radius
 print(c.diameter)
 c.radius = 10
 print(c.diameter)
+
+#Атрибуты классов и объектов
+class Fruit:
+  color = 'red'
+  
+bluberry = Fruit()
+print(bluberry.color)
+print(Fruit.color)
