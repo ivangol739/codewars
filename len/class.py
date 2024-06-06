@@ -130,3 +130,16 @@ print(fowl.name)
 fowl.name = "Doanld"
 print(fowl.name)
 
+# Свойства для вычисляемых занчение 
+class Circle():
+  def __init__(self, radius):
+    self.radius = radius
+  @property
+  def diameter(self):
+    return self.radius * 2
+  
+c = Circle(5)
+c.radius
+print(c.diameter)
+c.radius = 10
+print(c.diameter)
