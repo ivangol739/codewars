@@ -181,3 +181,20 @@ print(hunter1.who(), "says:", hunter1.says())
 
 hunter2 = QuestionQuote("Daffy Duck", "It's rabbit season")
 print(hunter2.who(), "says:", hunter2.says())
+
+
+class BabblingBrook():
+  def who(self):
+    return "Brook"
+  def says(self):
+    return "Babble"
+
+
+brook = BabblingBrook()
+
+def who_says(obj):
+  print(obj.who(), "says", obj.says())
+  
+who_says(hunter)
+who_says(hunter1)
+who_says(hunter2)
