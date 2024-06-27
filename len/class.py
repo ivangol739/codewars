@@ -1,3 +1,5 @@
+from collections import namedtuple
+
 # class Cat():
 #   pass
 
@@ -235,3 +237,9 @@ class Word():
   
 first = Word('ha')
 # print(first)
+
+# Именнованные кортежи
+Duck = namedtuple("Duck", "bill tail")
+duck = Duck("wide orange", "long")
+
+print(duck)
