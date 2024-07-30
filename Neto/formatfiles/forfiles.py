@@ -6,7 +6,7 @@ import pprint
 
 file1 = os.path.join(os.getcwd(), "Neto", "formatfiles", "fileslections", "newsafr.csv",)
 file2 = os.path.join(os.getcwd(), "Neto", "formatfiles", "fileslections", "newsafr.json")
-
+file3 = os.path.join(os.getcwd(), "Neto", "formatfiles", "fileslections", "newsafr.xml")
 
 ##ЧТЕНИЕ CSV ФАЙЛА ПОСТРОЧНО ЛЮБОЙ ДЛИНЫ
 # with open(file1, newline="", encoding="UTF-8") as f:
@@ -56,5 +56,30 @@ file2 = os.path.join(os.getcwd(), "Neto", "formatfiles", "fileslections", "newsa
 # with open(os.path.join(os.getcwd(), "Neto", "formatfiles", "fileslections", "resultJSON.json"), "w", encoding="UTF-8", newline="") as f:
 #   json.dump(new_list, f, ensure_ascii=False, indent=4)
 
+
+
+##СОЗДАЕМ ПАРСЕР И ЧИТАЕМ XML
+import xml.etree.ElementTree as ET
+
+parser = ET.XMLParser(encoding="UTF-8")
+tree = ET.parse(file3, parser)
+
+
+root = tree.getroot()
+print(root.tag)
+print(root.attrib)
+
+new_list = root.findall("channel/item")
+for item in new_list:
+  title = item.find("title")
+  print(title.text)
   
+##ЗАПИСЬ XML
+tree.write(os.path.join(os.getcwd(), "Neto", "formatfiles", "fileslections", "resultXML.xml"), encoding="UTF-8")
+
+#дгугой пример
+xml_str = '<root><channel type="dict"><title type="str">Дайджест новостей о python</title><link type="str">https://pythondigest.ru/</link></channel></root>'
+root = ET.fromstring(xml_str)
+tree = ET.ElementTree(root)
+tree.write("files/result2.xml", encoding="utf-8")
   
