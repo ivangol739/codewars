@@ -8,7 +8,7 @@ import os
 
 url = 'https://api.nasa.gov/planetary/apod'
 params = {
-  'api_key': 'gXeIRODc8aDNkfpDYecg1hZbYOMv5n9jmi1Yy3Hk',
+  'api_key': '',
   'date': '2024-07-18'
 }
 response = requests.get(url, params=params)
