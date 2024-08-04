@@ -80,6 +80,6 @@ tree.write(os.path.join(os.getcwd(), "Neto", "formatfiles", "fileslections", "re
 #дгугой пример
 xml_str = '<root><channel type="dict"><title type="str">Дайджест новостей о python</title><link type="str">https://pythondigest.ru/</link></channel></root>'
 root = ET.fromstring(xml_str)
-tree = ET.ElementTree(root)
+tree = ET.ElementTree(root) 
 tree.write("files/result2.xml", encoding="utf-8")
   
